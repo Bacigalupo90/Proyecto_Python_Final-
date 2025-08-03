@@ -1,0 +1,37 @@
+
+
+{% extends 'propiedades/base.html' %}
+
+{% block title %}Inicio - Corredora de Propiedades{% endblock %}
+
+{% block content %}
+<div class="p-5 mb-4 bg-light rounded-3 text-center">
+    <div class="container-fluid py-5">
+        <h1 class="display-5 fw-bold">Bienvenido a nuestra Corredora de Propiedades</h1>
+        <p class="col-md-8 fs-4 mx-auto">Encuentra la propiedad de tus sueños o publica la tuya con nosotros. ¡Estamos aquí para ayudarte!</p>
+        <a class="btn btn-primary btn-lg" href="{% url 'propiedades:propiedad_list' %}" role="button">Ver Propiedades Disponibles</a>
+    </div>
+</div>
+
+<div class="row text-center">
+    <div class="col-md-4">
+        <div class="card p-4 mb-4">
+            <h3>Amplia Selección</h3>
+            <p>Explora nuestra vasta colección de casas, apartamentos y terrenos en las mejores ubicaciones.</p>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="card p-4 mb-4">
+            <h3>Asesoramiento Experto</h3>
+            <p>Nuestro equipo de profesionales te guiará en cada paso del proceso de compra o venta.</p>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="card p-4 mb-4">
+            <h3>Publica tu Propiedad</h3>
+            <p>¿Quieres vender o arrendar? Publica tu propiedad de forma sencilla y llega a miles de compradores.</p>
+        </div>
+    </div>
+</div>
+{% endblock %}
+

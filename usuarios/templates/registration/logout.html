@@ -1,0 +1,16 @@
+
+{% extends 'propiedades/base.html' %}
+
+{% block title %}Cerrar Sesión{% endblock %}
+
+{% block content %}
+<div class="card p-4 mx-auto" style="max-width: 500px;">
+    <h1 class="mb-4 text-center">Sesión Cerrada</h1>
+    <p class="text-center">Has cerrado tu sesión exitosamente.</p>
+    <div class="text-center">
+        <a href="{% url 'usuarios:login' %}" class="btn btn-primary me-2">Iniciar Sesión de Nuevo</a>
+        <a href="{% url 'propiedades:index' %}" class="btn btn-secondary">Ir al Inicio</a>
+    </div>
+</div>
+{% endblock %}
+

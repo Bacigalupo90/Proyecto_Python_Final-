@@ -1,0 +1,18 @@
+
+
+{% extends 'propiedades/base.html' %}
+
+{% block title %}Eliminar Propiedad{% endblock %}
+
+{% block content %}
+<div class="card p-4">
+    <h1 class="mb-4">Eliminar Propiedad</h1>
+    <p>¿Estás seguro de que quieres eliminar la propiedad "<strong>{{ object.titulo }}</strong>"?</p>
+
+    <form method="post">
+        {% csrf_token %}
+        <button type="submit" class="btn btn-danger">Sí, Eliminar</button>
+        <a href="{% url 'propiedades:propiedad_detail' object.pk %}" class="btn btn-secondary">Cancelar</a>
+    </form>
+</div>
+{% endblock %}

@@ -1,0 +1,17 @@
+
+{% extends 'propiedades/base.html' %}
+
+{% block title %}Registrarse{% endblock %}
+
+{% block content %}
+<div class="card p-4 mx-auto" style="max-width: 500px;">
+    <h1 class="mb-4 text-center">Registrarse</h1>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit" class="btn btn-primary w-100 mb-3">Registrarse</button>
+    </form>
+    <p class="text-center">¿Ya tienes una cuenta? <a href="{% url 'usuarios:login' %}">Inicia sesión aquí</a></p>
+</div>
+{% endblock %}
+
